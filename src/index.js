@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import App from './App'
+import App from './components/App'
 
-import 'basscss/css/basscss.min.css'
+import 'ace-css/css/ace.min.css'
+import './index.css'
 
 ReactDOM.render(
   <App />,

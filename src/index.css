@@ -1,0 +1,25 @@
+html {
+  font-size: 18px;
+}
+
+body, h1, h2, h3, h4, h5 {
+  font-family: avenir next, avenir, helvetica neue, helvetica, arial, sans-serif;
+}
+
+.field {
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  padding: .5rem;
+}
+
+.field:focus {
+  border-color: #999;
+  outline: none;
+}
+
+.bw4 {
+  border-width: 4px;
+}

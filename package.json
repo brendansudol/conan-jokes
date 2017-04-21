@@ -4,6 +4,7 @@
   "homepage": "http://brendansudol.github.io/team-coco",
   "private": true,
   "dependencies": {
+    "ace-css": "^1.1.0",
     "algoliasearch": "^3.22.1",
     "basscss": "^7.1.1",
     "react": "^15.5.4",
