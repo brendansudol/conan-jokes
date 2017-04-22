@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Results = ({ data }) => {
+const Results = ({ data, clickTag }) => {
   const { hits, nbHits: total } = data
 
   return (
@@ -19,7 +19,8 @@ const Results = ({ data }) => {
             <button
               key={i}
               type='button'
-              className='mb1 sm-mb0 mr1 btn btn-sm btn-primary regular black bg-silver'
+              className='mb1 mr1 btn btn-sm btn-primary regular black bg-silver'
+              onClick={clickTag(tag)}
             >
               {tag}
             </button>

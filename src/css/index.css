@@ -1,15 +1,12 @@
 /* facilitate sticky footer */
 
-html,
-body,
-#root {
-  height: 100%;
-}
+html { height: 100%; }
+body { min-height: 100%; }
+#root, .app { min-height: 100vh; }
 
 .app {
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 header,
@@ -36,7 +33,7 @@ body, h1, h2, h3, h4, h5 { font-family: avenir next, avenir, helvetica, arial, s
 }
 
 .field:focus {
-  border-color: #999;
+  border-color: #ff851b;
   outline: none;
 }
 
