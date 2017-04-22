@@ -16,11 +16,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getResults('Trump')
+    // this.getResults('Trump')
   }
 
   getResults = query => {
-    index.search(query, (err, results) => {
+    index.search(query, { hitsPerPage: 1000 }, (err, results) => {
       this.setState({ results })
     })
   }
@@ -37,15 +37,19 @@ class App extends Component {
   render() {
     const { results, search } = this.state
 
+    window.results = results
+
     return (
-      <div className='p3' style={{ maxWidth: 600 }}>
+      <div className='p2 sm-p3 app' style={{ maxWidth: 600 }}>
         <Header />
-        <Search
-          value={search}
-          submit={this.submitHandler}
-          update={this.updateSearch}
-        />
-        {results && <Results data={results.hits} />}
+        <main>
+          <Search
+            value={search}
+            submit={this.submitHandler}
+            update={this.updateSearch}
+          />
+          {results && <Results data={results} />}
+        </main>
         <Footer />
       </div>
     )

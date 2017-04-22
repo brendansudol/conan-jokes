@@ -1,17 +1,37 @@
-html {
-  font-size: 18px;
+/* facilitate sticky footer */
+
+html,
+body,
+#root {
+  height: 100%;
 }
 
-body, h1, h2, h3, h4, h5 {
-  font-family: avenir next, avenir, helvetica neue, helvetica, arial, sans-serif;
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
+header,
+footer {
+  flex: none;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* resets or misc stylez */
+
+html { font-size: 18px; }
+body, h1, h2, h3, h4, h5 { font-family: avenir next, avenir, helvetica, arial, sans-serif; }
 
 .field {
   border: 1px solid #ddd;
-  box-sizing: border-box;
   display: block;
   font-family: inherit;
   font-size: inherit;
+  height: 2.5rem;
   padding: .5rem;
 }
 
@@ -20,6 +40,11 @@ body, h1, h2, h3, h4, h5 {
   outline: none;
 }
 
-.bw4 {
-  border-width: 4px;
+.btn-sm {
+  font-size: 12px;
+  padding: .125rem .25rem;
 }
+
+.bg-silver { background-color: #f0f0f0; }
+.border-silver { border-color: #f0f0f0; }
+.bw4 { border-width: 4px; }

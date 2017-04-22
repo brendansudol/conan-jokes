@@ -5,13 +5,14 @@ const Search = ({ value, submit, update }) => (
     <label className='hide'>Search</label>
     <input
       type='text'
-      className='flex-auto rounded-left field'
+      className='m0 flex-auto rounded-left field'
+      placeholder='Search by joke or topic...'
       value={value}
       onChange={update}
     />
     <button
       type='submit'
-      className='btn rounded-right border black bg-silver'
+      className='btn btn-primary bg-orange rounded-right'
     >
       Go
     </button>
