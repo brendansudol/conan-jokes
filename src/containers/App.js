@@ -31,7 +31,7 @@ class App extends Component {
     const { results, query } = this.props
 
     return (
-      <div className='p2 sm-p3 app' style={{ maxWidth: 600 }}>
+      <div className="p2 sm-p3 app" style={{ maxWidth: 600 }}>
         <Header />
         <main>
           <Search
@@ -39,12 +39,7 @@ class App extends Component {
             submit={this.handleSearchSubmit}
             update={this.handleSearchChange}
           />
-          {results && (
-            <Results
-              data={results}
-              clickTag={this.handleTagClick}
-            />
-          )}
+          {results && <Results data={results} clickTag={this.handleTagClick} />}
         </main>
         <Footer />
       </div>
@@ -56,7 +51,7 @@ App.propTypes = {
   query: PropTypes.string.isRequired,
   results: PropTypes.object,
   isFetching: PropTypes.bool.isRequired,
-  dispatch: PropTypes.func.isRequired
+  dispatch: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({ ...state })

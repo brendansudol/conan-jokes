@@ -11,15 +11,12 @@ import App from './containers/App'
 import 'ace-css/css/ace.min.css'
 import './css/index.css'
 
-const middleware = [ thunk, createLogger() ]
-const store = createStore(
-  reducer,
-  applyMiddleware(...middleware)
-)
+const middleware = [thunk, createLogger()]
+const store = createStore(reducer, applyMiddleware(...middleware))
 
 render(
   <Provider store={store}>
     <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 )

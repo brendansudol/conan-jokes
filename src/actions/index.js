@@ -3,7 +3,7 @@ import data from '../util/data'
 export const REQUEST_JOKES = 'REQUEST_JOKES'
 export const RECEIVE_JOKES = 'RECEIVE_JOKES'
 export const UPDATE_SEARCH = 'UPDATE_SEARCH'
-export const SELECT_TAG = 'SELECT_TAG' 
+export const SELECT_TAG = 'SELECT_TAG'
 
 export const requestJokes = () => ({
   type: REQUEST_JOKES,

@@ -5,11 +5,14 @@ import {
   SELECT_TAG,
 } from '../actions'
 
-const reducer = (state = {
-  results: null,
-  query: '',
-  isFetching: false,
-}, action) => {
+const reducer = (
+  state = {
+    results: null,
+    query: '',
+    isFetching: false,
+  },
+  action,
+) => {
   switch (action.type) {
     case REQUEST_JOKES:
       return {
