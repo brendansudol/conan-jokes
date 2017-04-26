@@ -13,11 +13,6 @@ class App extends Component {
     this.getJokesIfNeeded()
   }
 
-  handleSearchSubmit = e => {
-    e.preventDefault()
-    this.getJokesIfNeeded()
-  }
-
   getJokesIfNeeded = () => {
     const { dispatch, query } = this.props
     if (query) dispatch(fetchJokes(query))
@@ -25,6 +20,18 @@ class App extends Component {
 
   handleSearchChange = e => {
     this.props.dispatch(updateSearch(e.target.value))
+  }
+
+  handleSearchSubmit = e => {
+    e.preventDefault()
+    this.getJokesIfNeeded()
+  }
+
+  handleSuggestion = text => e => {
+    e.preventDefault()
+    const { dispatch } = this.props
+    dispatch(updateSearch(text))
+    dispatch(fetchJokes(text))
   }
 
   handleTagClick = tag => () => {
@@ -41,8 +48,10 @@ class App extends Component {
         <Header />
         <main>
           <Search
-            value={query}
+            query={query}
+            results={results}
             submit={this.handleSearchSubmit}
+            suggest={this.handleSuggestion}
             update={this.handleSearchChange}
           />
           {results && <Results data={results} clickTag={this.handleTagClick} />}

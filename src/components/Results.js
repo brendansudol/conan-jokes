@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Results = ({ data, clickTag }) => {
-  const { hits, nbHits: total } = data
+  const { hits, query, nbHits: total } = data
 
   return (
     <div>
       <div className="mb2">
-        <strong>{total}</strong> results
+        <strong>{total}</strong> results for <strong>{query}</strong>
       </div>
       {hits.map(d => (
         <div key={d.id} className="mb3 border-left border-silver bw4 pl2 py2">
