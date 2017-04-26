@@ -9,12 +9,18 @@ import Results from '../components/Results'
 import Search from '../components/Search'
 
 class App extends Component {
+  componentDidMount() {
+    this.getJokesIfNeeded()
+  }
+
   handleSearchSubmit = e => {
     e.preventDefault()
+    this.getJokesIfNeeded()
+  }
 
+  getJokesIfNeeded = () => {
     const { dispatch, query } = this.props
-    if (!query) return
-    dispatch(fetchJokes(query))
+    if (query) dispatch(fetchJokes(query))
   }
 
   handleSearchChange = e => {

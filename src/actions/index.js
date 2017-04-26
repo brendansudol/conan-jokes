@@ -1,4 +1,5 @@
 import data from '../util/data'
+import { updateUrl } from '../util/misc'
 
 export const REQUEST_JOKES = 'REQUEST_JOKES'
 export const RECEIVE_JOKES = 'RECEIVE_JOKES'
@@ -16,6 +17,7 @@ export const receiveJokes = results => ({
 
 export const fetchJokes = query => dispatch => {
   dispatch(requestJokes())
+  updateUrl(query)
 
   data.search(query, { hitsPerPage: 1000 }, (err, data) => {
     dispatch(receiveJokes(data))
