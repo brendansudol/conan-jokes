@@ -1,3 +1,7 @@
-search through Conan’s monologue jokes, dating back to 2010
+https://brendansudol.com/conan-jokes/
+
+search and explore Conan’s monologue jokes dating back to 2010
+
+for joke data collection, see https://github.com/brendansudol/conan-jokes-data
 
 built with react, redux, & algolia
