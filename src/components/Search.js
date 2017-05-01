@@ -10,7 +10,7 @@ const Search = ({ query, results, submit, suggest, update }) => {
       <form className="flex" onSubmit={submit} style={{ maxWidth: 350 }}>
         <label className="hide">Search</label>
         <input
-          type="text"
+          type="search"
           className="m0 flex-auto rounded-left field"
           placeholder="Search by joke or topic..."
           value={query}
