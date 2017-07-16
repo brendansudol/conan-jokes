@@ -22,6 +22,7 @@ main {
 
 html { font-size: 18px; }
 body, h1, h2, h3, h4, h5 { font-family: avenir next, avenir, helvetica, arial, sans-serif; }
+input[type="search"] { -webkit-appearance: none; }
 
 .field {
   border: 1px solid #ddd;
